@@ -21,10 +21,11 @@ end
 xy_shifts
 %% Итоговое сравнение первого(сдвинутого) и последнего изображения
 imshowpair(imageArray{numImages},imtranslate(imageArray{1},sum(xy_shifts)),...
-    'falsecolor');
+    'falsecolor')
 %% Функция, вычисляющая сдвиг для пары изображений
 function shift = find_shift_xy(img1,img2)
 % Рассматриваемая пара изображений
+
 [rows,cols] = size(img1);
 % Преобразование фурье изображений
 f_img1 = fft2(img1);

@@ -9,7 +9,7 @@ To make changes, update the MATLAB code and republish this document.
 <title>shifts_xy</title>
 <meta name="generator" content="MATLAB 23.2">
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
-<meta name="DC.date" content="2024-01-09">
+<meta name="DC.date" content="2024-01-10">
 <meta name="DC.source" content="shifts_xy.m">
 <style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
@@ -122,7 +122,7 @@ xy_shifts
 </pre>
 <h2 id="3">Итоговое сравнение первого(сдвинутого) и последнего изображения</h2>
 <pre class="codeinput">imshowpair(imageArray{numImages},imtranslate(imageArray{1},sum(xy_shifts)),<span class="keyword">...</span>
-    <span class="string">'falsecolor'</span>);
+    <span class="string">'falsecolor'</span>)
 </pre>
 <img vspace="5" hspace="5" src="shifts_xy_10.png" alt=""> <h2 id="4">Функция, вычисляющая сдвиг для пары изображений</h2>
 <pre class="codeinput">
@@ -195,7 +195,7 @@ end
 xy_shifts
 %% Итоговое сравнение первого(сдвинутого) и последнего изображения
 imshowpair(imageArray{numImages},imtranslate(imageArray{1},sum(xy_shifts)),...
-    'falsecolor');
+    'falsecolor')
 %% Функция, вычисляющая сдвиг для пары изображений
 function shift = find_shift_xy(img1,img2)
 % Рассматриваемая пара изображений
